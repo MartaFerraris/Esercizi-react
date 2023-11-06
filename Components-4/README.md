@@ -1,0 +1,1 @@
+Try to change Vite's default port to 3000 by modifying the vite.config.js file.
