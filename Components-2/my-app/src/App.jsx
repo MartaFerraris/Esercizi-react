@@ -1,9 +1,10 @@
+import { Hello } from "./Hello";
 import { Message } from "./Message";
 
 export function App() {
     return (
         <div>
-            <h3>Hello!</h3>
+            <Hello />
             <Message />
         </div>
     )
