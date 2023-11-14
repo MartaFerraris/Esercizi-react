@@ -7,7 +7,8 @@ export function App() {
         <div>
             <Hello />
             <Message />
-            <Welcome name="Ugo" />
+            <Welcome />
+            <Welcome name="Ugo"/>
         </div>
     )
 }
