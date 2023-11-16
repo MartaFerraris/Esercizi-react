@@ -7,7 +7,7 @@ export function App() {
         <div>
             <Hello />
             <Message />
-            <Welcome name="Ugo" age={29}/>
+            <Welcome name="Ugo" age={29} />
         </div>
     )
 }
