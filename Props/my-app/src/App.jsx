@@ -18,7 +18,7 @@ export function App() {
             <Welcome name="John" age={19} />
             <Welcome name="Sam" age={10} />
             <AlertClock handleClick={showLocalTime}/>
-            <Counter />
+            <Counter initValue={0} />
         </div>
     )
 }

@@ -1,21 +1,28 @@
 import { useState } from "react"
+import { CounterDisplay } from "./CounterDisplay"
 
-export function Counter() {
-    const [counter, setCounter ] = useState(0)
+export function Counter({ initValue = 0 }) {
+    const [counter, setCounter] = useState(initValue)
 
     function incrCounter() {
-        setCounter((c) => c + 1) 
+        setCounter((c) => c + 1)
+    }
+
+    function decrCounter() {
+        setCounter((c) => c - 1)
+    }
+
+    function resetCounter() {
+        setCounter(initValue)
     }
 
     return (
         <div>
             <h1>Counter</h1>
-            <h2>{counter}</h2>            
+            <CounterDisplay counter={counter} />
+            <button onClick={decrCounter}>Decrement</button>
             <button onClick={incrCounter}>Increment</button>
+            <button onClick={resetCounter}>Reset</button>
         </div>
     )
 }
-
-// Sì possono usare sia una funzione che un valore.
-// Passando una funzione è più indicato in alcune situazioni, 
-// soprattutto quando il nuovo stato dipende dal valore precedente.
