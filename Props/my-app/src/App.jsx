@@ -3,6 +3,7 @@ import { Clock } from "./Clock";
 import { Counter } from "./Counter";
 import { Hello } from "./Hello";
 import { Message } from "./Message";
+import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -18,9 +19,10 @@ export function App() {
             <Message />
             <Welcome name="John" age={19} />
             <Welcome name="Sam" age={10} />
-            <AlertClock handleClick={showLocalTime}/>
+            <AlertClock handleClick={showLocalTime} />
             <Counter initValue={0} />
             <Clock />
+            <MouseClicker one="Click!"/>
         </div>
     )
 }
