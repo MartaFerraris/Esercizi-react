@@ -15,6 +15,10 @@ export function App() {
         alert(`The current time is ${time.toLocaleTimeString()}`)
     }
 
+    function handleOnLogin(data) {
+        console.log("data: ", data)
+    }
+
     return (
         <div>
             <Hello />
@@ -24,9 +28,9 @@ export function App() {
             <AlertClock handleClick={showLocalTime} />
             <Counter initValue={0} />
             <Clock />
-            <MouseClicker one="Click!"/>
-            <InteractiveWelcome/>
-            <Login/>
+            <MouseClicker one="Click!" />
+            <InteractiveWelcome />
+            <Login onLogin={handleOnLogin} />
         </div>
     )
 }
