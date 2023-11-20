@@ -20,15 +20,7 @@ export function Login() {
             }
         })
     }
-
-    function handleReset() {
-        setData({
-            username: '',
-            password: '',
-            checkbox: false,
-        })
-    }
-
+    
     return (
         <div>
             <h2>Login</h2>
