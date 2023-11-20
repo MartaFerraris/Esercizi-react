@@ -1,5 +1,5 @@
 import { Age } from "./Age"
-import { InteractWelcome } from "./FormContrUncontr"
+import { InteractWelcome } from "./Form"
 
 
 
