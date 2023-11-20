@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function Login() {
+export function Login({}) {
 
     const [data, setData] = useState({
         username: '',
@@ -21,14 +21,6 @@ export function Login() {
         })
     }
 
-    function handleReset() {
-        setData({
-            username: '',
-            password: '',
-            checkbox: false,
-        })
-    }
-
     return (
         <div>
             <h2>Login</h2>
@@ -37,6 +29,7 @@ export function Login() {
             <label>Password:</label>
             <input name="password" type="password" value={data.password} onChange={handleLogin}/>
             <input name="checkbox" type="checkbox" checked={data.checkbox} onChange={handleLogin} />
+            <button disabled={!data.username || !data.password}>Login</button>
         </div>
     )
 }
