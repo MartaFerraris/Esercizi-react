@@ -1,6 +1,7 @@
 import { AlertClock } from "./AlertClock";
 import { Clock } from "./Clock";
 import { Counter } from "./Counter";
+import { InteractiveWelcome } from "./Form";
 import { Hello } from "./Hello";
 import { Message } from "./Message";
 import { MouseClicker } from "./MouseClicker";
@@ -23,6 +24,7 @@ export function App() {
             <Counter initValue={0} />
             <Clock />
             <MouseClicker one="Click!"/>
+            <InteractiveWelcome/>
         </div>
     )
 }
