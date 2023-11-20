@@ -1,4 +1,7 @@
 import { Age } from "./Age"
+import { InteractWelcome } from "./FormContrUncontr"
+
+
 
 export function Welcome({ name, age }) {
     return (
@@ -6,8 +9,7 @@ export function Welcome({ name, age }) {
             <p>Welcome, <strong>{name}</strong></p>
             {age > 18 && <Age age={age} />}
             {age < 18 && <p>You are very young!</p>}
+            <InteractWelcome />
         </div>
     )
 }
-
-//You are very young!
