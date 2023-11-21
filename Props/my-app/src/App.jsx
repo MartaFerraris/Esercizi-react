@@ -7,6 +7,7 @@ import { Login } from "./Login";
 import { Message } from "./Message";
 import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export function App() {
 
@@ -31,6 +32,7 @@ export function App() {
             <MouseClicker one="Click!" />
             <InteractiveWelcome />
             <Login onLogin={handleOnLogin} />
+            <UncontrolledLogin />
         </div>
     )
 }
