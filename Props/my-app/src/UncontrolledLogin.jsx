@@ -3,14 +3,12 @@ export function UncontrolledLogin() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const username = event.target.elements.username.value;
-        const password = event.target.elements.password.value;
-        const checkbox = event.target.elements.checkbox.checked;
+        const formData = new FormData(event.target);
 
         const data = {
-            username,
-            password,
-            checkbox
+            username: formData.get('username'),
+            password: formData.get('password'),
+            checkbox: formData.get('checkbox') === 'on' ? true : false,
         };
 
         console.log(data);
@@ -29,3 +27,13 @@ export function UncontrolledLogin() {
         </form>
     )
 }
+
+// Vantaggi di usare FormData sono:
+// - semplifica il raccoglimento dei valori degli input;
+// - gestisce in modo autonomo l'inclusione degli elementi del modulo;
+// - facilità l'invio dei dati.
+
+// Svantaggi di usare FormData sono:
+// - possono insorgere problemi di compatibilità con i browser;
+// - si possono avere delle limitazioni di eleborazione dati se troppo complessi;
+// - non è dinamico.
