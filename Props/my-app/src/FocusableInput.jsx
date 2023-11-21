@@ -5,7 +5,7 @@ export function FocusableInput() {
 
     useEffect(() => {
         inputRef.current?.focus()
-    })
+    }, [])
     return (
         <div>
             <h2>Focus</h2>
