@@ -16,7 +16,7 @@ export function App() {
     }
 
     function handleOnLogin(data) {
-        console.log("data: ", data)
+        console.log("Login data: ", data)
     }
 
     return (

@@ -34,12 +34,6 @@ export function Login({ onLogin }) {
         event.preventDefault(); 
         // utilizzando il metodo `preventDefault()` previene il ricaricamento della pagina e 
         // permette una gestione personalizzata dell'invio del modulo secondo la propria logica. 
-        const username = data;
-        const password = data;
-
-        if (username === "your_username" && password === "your_password") {
-            onLogin(data);
-        }
     }
 
     return (
