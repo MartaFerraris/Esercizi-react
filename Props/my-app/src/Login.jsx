@@ -13,12 +13,20 @@ export function Login({ onLogin }) {
         const name = event.target.name
         const checkbox = event.target.checked
         const type = event.target.type
-        const value = event.target.value        
+        const value = event.target.value
         setData((d) => {
             return {
                 ...data,
                 [name]: type === 'checkbox' ? checkbox : value,
             }
+        })
+    }
+
+    function handleReset() {
+        setData({
+            username: '',
+            password: '',
+            checkbox: false
         })
     }
 
@@ -32,6 +40,7 @@ export function Login({ onLogin }) {
                 <input name="password" type="password" value={data.password} onChange={handleLogin} />
                 <input name="checkbox" type="checkbox" checked={data.checkbox} onChange={handleLogin} />
                 <button disabled={!data.username || !data.password} onClick={() => onLogin(data)}>Login</button>
+                <button onClick={handleReset}>Reset</button>
             </form>
         </div>
     )
