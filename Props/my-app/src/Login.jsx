@@ -51,7 +51,7 @@ export function Login({ onLogin }) {
                 <label>Password:</label>
                 <input name="password" type="password" value={data.password} onChange={handleLogin} />
                 <input name="checkbox" type="checkbox" checked={data.checkbox} onChange={handleLogin} />
-                <button disabled={!data.username || !data.password} onClick={() => onLogin(data)}>Login</button>
+                <button type="submit" disabled={!data.username || !data.password} onClick={() => onLogin(data)}>Login</button>
                 <button onClick={handleReset}>Reset</button>
             </form>
         </div>
