@@ -8,6 +8,7 @@ import { Message } from "./Message";
 import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 import { UncontrolledLogin } from "./UncontrolledLogin";
+import { FocusableInput } from "./FocusableInput";
 
 export function App() {
 
@@ -33,6 +34,7 @@ export function App() {
             <InteractiveWelcome />
             <Login onLogin={handleOnLogin} />
             <UncontrolledLogin />
+            <FocusableInput />
         </div>
     )
 }
