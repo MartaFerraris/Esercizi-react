@@ -30,10 +30,22 @@ export function Login({ onLogin }) {
         })
     }
 
+    function handleForm(event) {
+        event.preventDefault(); 
+        // utilizzando il metodo `preventDefault()` previene il ricaricamento della pagina e 
+        // permette una gestione personalizzata dell'invio del modulo secondo la propria logica. 
+        const username = data;
+        const password = data;
+
+        if (username === "your_username" && password === "your_password") {
+            onLogin(data);
+        }
+    }
+
     return (
         <div>
             <h2>Login</h2>
-            <form>
+            <form onSubmit={handleForm}>
                 <label>Username:</label>
                 <input name="username" value={data.username} onChange={handleLogin} />
                 <label>Password:</label>
