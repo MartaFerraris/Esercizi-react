@@ -19,13 +19,21 @@ export function ToDoList({ todosArr }) {
 
     function handleEvent(event) {
         todos.push(inputText)
+        if (inputText != "") {
+            setInputText("")
+        } 
+    }
+
+    function handleReset() {
+        setTodos([])
     }
 
     return (
         <div>
             <h2>To Do List</h2>
-            <input onChange={handleInput} />
+            <input onChange={handleInput} value={inputText}/>
             <button onClick={handleEvent}>Click</button>
+            <button type="reset" onClick={handleReset}>Reset</button>
             {todos?.map((todo) => <li>{todo}</li>)}
         </div>
     )
