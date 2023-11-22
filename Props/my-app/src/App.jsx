@@ -10,6 +10,7 @@ import { Welcome } from "./Welcome";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { FocusableInput } from "./FocusableInput";
 import { Colors } from "./Colors";
+import { ToDoList } from "./ToDoList";
 
 
 export function App() {
@@ -31,6 +32,8 @@ export function App() {
         { id: 5, name: 'violet' }
     ]
 
+    const todosArr = ["heavy machinegun", "hadouken", "Kamehamehaaa"]
+
     return (
         <div>
             <Hello />
@@ -46,6 +49,7 @@ export function App() {
             <UncontrolledLogin />
             <FocusableInput />
             <Colors colors={colors}/>
+            <ToDoList todosArr={todosArr}/>
         </div>
     )
 }
