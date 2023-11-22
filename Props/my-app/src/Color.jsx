@@ -1,8 +1,8 @@
-export function Color({ colors }) {
+export function Color({ color }) {
 
     return (
-        <ul>
-            {colors.map((color) => (<li key={color.id}>{color.name}</li>))}
-        </ul>
+        <div>
+            <li>{color.name}</li>
+        </div>
     )
 }

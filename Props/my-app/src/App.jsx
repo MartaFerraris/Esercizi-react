@@ -9,7 +9,8 @@ import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { FocusableInput } from "./FocusableInput";
-import { Color } from "./Color";
+import { Colors } from "./Colors";
+
 
 export function App() {
 
@@ -21,6 +22,14 @@ export function App() {
     function handleOnLogin(data) {
         console.log("Login data: ", data)
     }
+
+    const colors = [
+        { id: 1, name: 'red' },
+        { id: 2, name: 'green' },
+        { id: 3, name: 'blue' },
+        { id: 4, name: 'orange' },
+        { id: 5, name: 'violet' }
+    ]
 
     return (
         <div>
@@ -36,7 +45,7 @@ export function App() {
             <Login onLogin={handleOnLogin} />
             <UncontrolledLogin />
             <FocusableInput />
-            <Color/>
+            <Colors colors={colors}/>
         </div>
     )
 }
