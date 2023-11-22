@@ -9,6 +9,7 @@ import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { FocusableInput } from "./FocusableInput";
+import { Color } from "./Color";
 
 export function App() {
 
@@ -35,6 +36,7 @@ export function App() {
             <Login onLogin={handleOnLogin} />
             <UncontrolledLogin />
             <FocusableInput />
+            <Color/>
         </div>
     )
 }
