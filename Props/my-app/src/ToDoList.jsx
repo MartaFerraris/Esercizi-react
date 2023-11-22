@@ -23,6 +23,7 @@ export function ToDoList({ todosArr }) {
 
     return (
         <div>
+            <h2>To Do List</h2>
             <input onChange={handleInput} />
             <button onClick={handleEvent}>Click</button>
             {todos?.map((todo) => <li>{todo}</li>)}
