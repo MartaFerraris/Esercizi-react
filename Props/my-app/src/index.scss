@@ -6,3 +6,28 @@
 }
 
 /* il mio index.jsx si chiama mail.jsx */
+
+.clock {
+    padding: 15px;
+    margin: 15px;
+    background-color: lightgreen;
+    border: 3px solid darkgreen;
+    border-radius: 10px;
+}
+
+.todolist {
+    padding: 15px;
+    margin: 15px;
+    border: 3px dotted orangered;
+    background-color: rgb(251, 190, 75);
+}
+
+.container {
+    padding: 10px;
+    background-color: white;
+    border: 3px solid rgb(255, 58, 58);
+}
+
+/* .app-content-hidden {
+    display: none;
+} */

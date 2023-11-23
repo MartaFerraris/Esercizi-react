@@ -41,7 +41,7 @@ export function ToDoList({ todosArr }) {
     }
 
     return (
-        <div>
+        <div className="todolist">
             <h2>To Do List</h2>
             <input onChange={handleInput} value={inputText} />
             <button onClick={handleEvent}>Click</button>

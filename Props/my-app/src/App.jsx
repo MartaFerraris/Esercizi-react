@@ -11,6 +11,7 @@ import { UncontrolledLogin } from "./UncontrolledLogin";
 import { FocusableInput } from "./FocusableInput";
 import { Colors } from "./Colors";
 import { ToDoList } from "./ToDoList";
+import { Container } from "./Container";
 
 
 export function App() {
@@ -35,7 +36,7 @@ export function App() {
     const todosArr = ["heavy machinegun", "hadouken", "Kamehamehaaa"]
 
     return (
-        <div>
+        <Container title={<h1>My application</h1>}>
             <Hello />
             <Message />
             <Welcome name="John" age={19} />
@@ -50,6 +51,6 @@ export function App() {
             <FocusableInput />
             <Colors colors={colors}/>
             <ToDoList todosArr={todosArr}/>
-        </div>
+        </Container>
     )
 }
