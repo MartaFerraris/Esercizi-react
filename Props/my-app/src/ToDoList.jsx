@@ -7,7 +7,7 @@ export function ToDoList({ todosArr }) {
 
     useEffect(() => {
         setTodos(todosArr)
-    }, [todosArr])
+    }, [])
 
     console.log("State: ", todos)
 
@@ -21,20 +21,30 @@ export function ToDoList({ todosArr }) {
         todos.push(inputText)
         if (inputText != "") {
             setInputText("")
-        } 
+        }
     }
 
     function handleReset() {
         setTodos([])
     }
 
+    function handleRemove(i) { 
+        const remove = todos.splice(i, 1)
+        console.log(remove)
+    }
+
     return (
         <div>
             <h2>To Do List</h2>
-            <input onChange={handleInput} value={inputText}/>
+            <input onChange={handleInput} value={inputText} />
             <button onClick={handleEvent}>Click</button>
             <button type="reset" onClick={handleReset}>Reset</button>
-            {todos?.map((todo) => <li>{todo}</li>)}
+            {todos?.map((todo, i) => {
+                return (
+                    <div key={i}>
+                        <li>{todo} <button onClick={() => handleRemove(i)}>Remove</button></li>                        
+                    </div>)
+            })}
         </div>
     )
 }
