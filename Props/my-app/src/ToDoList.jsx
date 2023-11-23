@@ -28,9 +28,16 @@ export function ToDoList({ todosArr }) {
         setTodos([])
     }
 
-    function handleRemove(i) { 
-        const remove = todos.splice(i, 1)
-        console.log(remove)
+    function handleRemove(event, i) { 
+        
+        let array = [...todos];
+        let index = array.indexOf(event.target.value)
+        if (i !== -1) {
+            array.splice(index, 1);
+            setTodos(array);
+        }
+        console.log(event)
+
     }
 
     return (
@@ -42,7 +49,7 @@ export function ToDoList({ todosArr }) {
             {todos?.map((todo, i) => {
                 return (
                     <div key={i}>
-                        <li>{todo} <button onClick={() => handleRemove(i)}>Remove</button></li>                        
+                        <li>{todo} <button onClick={(event) => handleRemove(event, i)}>Remove</button></li>                        
                     </div>)
             })}
         </div>
