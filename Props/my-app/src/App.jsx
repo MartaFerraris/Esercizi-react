@@ -12,7 +12,8 @@ import { FocusableInput } from "./FocusableInput";
 import { Colors } from "./Colors";
 import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
-
+import { LanguageContext } from "./LanguageContext";
+import { useState } from "react";
 
 export function App() {
 
@@ -35,6 +36,12 @@ export function App() {
 
     const todosArr = ["heavy machinegun", "hadouken", "Kamehamehaaa"]
 
+    const [language, setLanguage] = useState('it')
+
+    function handleLangChange(event) {
+        setLanguage(event.target.value)
+    }
+
     return (
         <Container title={<h1>My application</h1>}>
             <Hello />
@@ -43,14 +50,20 @@ export function App() {
             <Welcome name="Sam" age={10} />
             <AlertClock handleClick={showLocalTime} />
             <Counter initValue={0} />
-            <Clock />
+            <LanguageContext.Provider value={language}>
+                <select value={language} onChange={handleLangChange}>
+                    <option value='it'>IT</option>
+                    <option value='en'>EN</option>
+                </select>
+                <Clock />
+            </LanguageContext.Provider>
             <MouseClicker one="Click!" />
             <InteractiveWelcome />
             <Login onLogin={handleOnLogin} />
             <UncontrolledLogin />
             <FocusableInput />
-            <Colors colors={colors}/>
-            <ToDoList todosArr={todosArr}/>
+            <Colors colors={colors} />
+            <ToDoList todosArr={todosArr} />
         </Container>
     )
 }
