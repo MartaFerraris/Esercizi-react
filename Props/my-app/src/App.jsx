@@ -14,6 +14,7 @@ import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
+import { GithubUser } from "./GithubUser";
 
 export function App() {
 
@@ -64,6 +65,7 @@ export function App() {
             <FocusableInput />
             <Colors colors={colors} />
             <ToDoList todosArr={todosArr} />
+            <GithubUser username="MartaFerraris"/>
         </Container>
     )
 }
