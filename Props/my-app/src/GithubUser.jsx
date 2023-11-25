@@ -16,9 +16,8 @@ export function GithubUser({ username }) {
     return (
         <div>
             <h2>Github user</h2>
-            {data && <div>{data.name}</div>}
-            {data && <div>{data.login}</div>}
-            {data && <img src={data.avatar_url} alt="profile image" />}
+            {data && <img className="gituser" src={data.avatar_url} alt="profile image" />}
+            {data && <div>User name: {data.name}; User login: {data.login}</div>}
         </div>
     )
 }
