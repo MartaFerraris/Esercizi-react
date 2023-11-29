@@ -50,6 +50,8 @@ export function App() {
             <Message />
             <Routes>
                 <Route path="/" element={<Welcome name="Ugo" />}/>
+                <Route path="/counter" element={<Counter/>} />
+                <Route path="/user/:username" element={<GithubUser/>}/>
             </Routes>
         </div>
     )
