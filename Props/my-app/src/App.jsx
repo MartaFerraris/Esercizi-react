@@ -49,11 +49,10 @@ export function App() {
         <div title={<h1>My application</h1>}>
             <Hello />
             <Message />
-            <GithubUser username={'MartaFerraris'}/>
             <Routes>
                 <Route path="/" element={<Welcome name="Ugo" />}/>
                 <Route path="/counter" element={<Counter/>} />
-                <Route path="/user/:username" element={<GithubUsers/>}/>
+                <Route path="/:username" element={<GithubUsers/>}/>
             </Routes>
         </div>
     )
