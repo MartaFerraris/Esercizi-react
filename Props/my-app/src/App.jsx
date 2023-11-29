@@ -1,5 +1,7 @@
+import { Route } from "react-router-dom";
 import { Hello } from "./Hello";
 import { Message } from "./Message";
+import { Routes } from "./Routes";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -7,8 +9,9 @@ export function App() {
         <div>
             <Hello />
             <Message />
-            <Welcome />
-            <Welcome name="Ugo"/>
+            <Routes>
+                <Route path="/" element={<Welcome name="Ugo" />}/>
+            </Routes>
         </div>
     )
 }
