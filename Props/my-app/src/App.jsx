@@ -15,7 +15,7 @@ import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
-import { GithubUser } from "./GithubUser";
+import { GithubUsers } from "./GithubUsers";
 
 export function App() {
 
