@@ -1,9 +1,8 @@
 import { AlertClock } from "./AlertClock";
 import { Counter } from "./Counter";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Hello } from "./Hello";
 import { Message } from "./Message";
-import { Routes } from "./Routes";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -19,6 +18,7 @@ export function App() {
             <Message />
             <Routes>
                 <Route path="/" element={<Welcome name="Ugo" />}/>
+                <Route path="/counter" element={<Counter />} />
             </Routes>
         </div>
     )
