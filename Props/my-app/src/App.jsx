@@ -2,7 +2,7 @@ import { AlertClock } from "./AlertClock";
 import { Clock } from "./Clock";
 import { Counter } from "./Counter";
 import { InteractiveWelcome } from "./Form";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { Hello } from "./Hello";
 import { Login } from "./Login";
 import { Message } from "./Message";
@@ -50,10 +50,14 @@ export function App() {
             <Hello />
             <Message />
             <Routes>
-                <Route path="/" element={<Welcome name="Ugo" />}/>
-                <Route path="/counter" element={<Counter/>} />
-                <Route path="/:username" element={<GithubUsers/>}/>
+                <Route path="/" element={<Welcome name="Ugo" />} />
+                <Route path="/counter" element={<Counter />} />
+                <Route path="/user" element={<GithubUsers />} />
+                <Route path="/:username" element={<GithubUsers />} />
             </Routes>
+            <Link to={"/"}>Home</Link><br />
+            <Link to={"/counter"}>Counter</Link><br />
+            <Link to={"/user"}>GithubUser</Link>
         </div>
     )
 }
