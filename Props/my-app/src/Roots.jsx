@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { App } from "./App"
 
-export function Routes() {
+export function Roots() {
     return (
         <BrowserRouter>
             <App />
