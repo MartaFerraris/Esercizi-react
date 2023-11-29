@@ -16,11 +16,11 @@ export function GithubUsers() {
 
     return (
         <div>
-            <input onChange={handleInput} name="username" />
+             <input onChange={handleInput} name="username" />
             <button onClick={handleSubmit}>Submit</button>
             {userList.map((user, index) => (
                 <div key={user + index}>
-                    <GithubUser username={user} />
+                    <GithubUser username={username} />
                 </div>))}
         </div>
     )

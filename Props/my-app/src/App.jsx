@@ -16,6 +16,7 @@ import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
 import { GithubUsers } from "./GithubUsers";
+import { GithubUser } from "./GithubUser";
 
 export function App() {
 
@@ -48,10 +49,11 @@ export function App() {
         <div title={<h1>My application</h1>}>
             <Hello />
             <Message />
+            <GithubUser username={'MartaFerraris'}/>
             <Routes>
                 <Route path="/" element={<Welcome name="Ugo" />}/>
                 <Route path="/counter" element={<Counter/>} />
-                <Route path="/user/:username" element={<GithubUser/>}/>
+                <Route path="/user/:username" element={<GithubUsers/>}/>
             </Routes>
         </div>
     )
