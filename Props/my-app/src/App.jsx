@@ -1,7 +1,9 @@
 import { AlertClock } from "./AlertClock";
 import { Counter } from "./Counter";
+import { Route } from "react-router-dom";
 import { Hello } from "./Hello";
 import { Message } from "./Message";
+import { Routes } from "./Routes";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -15,10 +17,9 @@ export function App() {
         <div>
             <Hello />
             <Message />
-            <Welcome name="John" age={19} />
-            <Welcome name="Sam" age={10} />
-            <AlertClock handleClick={showLocalTime}/>
-            <Counter />
+            <Routes>
+                <Route path="/" element={<Welcome name="Ugo" />}/>
+            </Routes>
         </div>
     )
 }
