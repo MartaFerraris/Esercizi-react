@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react"
 import { CounterDisplay } from "./CounterDisplay"
+import { useCounter } from "./useCounter"
 
 export function Counter({ initValue = 0 }) {
-    const [counter, setCounter] = useState(initValue)
+    /* const [counter, setCounter] = useState(initValue)
     const directionRef = useRef('up')
 
     useEffect(() => {
@@ -20,15 +21,17 @@ export function Counter({ initValue = 0 }) {
 
     function resetCounter() {
         setCounter(initValue)
-    }
+    } */
+    
+    const {counter, onIncrement, onDecrement, onReset} = useCounter(initValue)
 
     return (
         <div>
             <h1>Counter</h1>
             <CounterDisplay counter={counter} />
-            <button onClick={decrCounter}>Decrement</button>
-            <button onClick={incrCounter}>Increment</button>
-            <button onClick={resetCounter}>Reset</button>
+            <button onClick={onDecrement}>Decrement</button>
+            <button onClick={onIncrement}>Increment</button>
+            <button onClick={onReset}>Reset</button>
         </div>
     )
 }
