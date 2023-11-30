@@ -38,7 +38,8 @@ export function App() {
         <div title={<h1>My application</h1>}>
             <Hello />
             <Message />
-            <Routes>
+            <GithubUser/>
+            {/* <Routes>
                 <Route path="/" element={<Welcome name="Ugo" />} />
                 <Route path="/counter" element={<Counter />} />
                 <Route path="/users" element={<GithubUsers />}>
@@ -53,7 +54,7 @@ export function App() {
             </Routes>
             <Link to={"/"}>Home</Link><br />
             <Link to={"/counter"}>Counter</Link><br />
-            <Link to={"/users"}>GithubUser</Link>
+            <Link to={"/users"}>GithubUser</Link> */}
         </div>
     )
 }

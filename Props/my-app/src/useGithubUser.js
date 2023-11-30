@@ -1,18 +1,16 @@
-import { useEffect, useState } from "react"
+import useSWR from "swr"
+
+const fetch = (url) => {
+    fetch(url)
+    .then((resp) => resp.json())
+}
 
 export function useGithubUser(username) {
-    const [data, setData] = useState(null)
+    const [data] = useSWR(
+        `https://api.github.com/users/${username}`,
+        fetch
+    )
+    console.log(data)
 
-    useEffect(() => {
-        fetch(`https://api.github.com/users/${username}`)
-            .then(response => { return response.json() })
-            .then(json => {
-                console.log(json)
-                setData(json)
-            })
-    }, [username])
-
-    return {
-        data: data
-    }
+    return { data }
 }
