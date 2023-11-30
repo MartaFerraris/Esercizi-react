@@ -50,10 +50,17 @@ export function App() {
             <Hello />
             <Message />
             <Routes>
+                <Route path="*" element={
+                    <div>
+                        <p>Not found</p>
+                        <Link to={"/"}>Back to home</Link>
+                    </div>
+                }/>
                 <Route path="/" element={<Welcome name="Ugo" />} />
                 <Route path="/counter" element={<Counter />} />
                 <Route path="/user" element={<GithubUsers />} />
                 <Route path="/:username" element={<GithubUsers />} />
+                
             </Routes>
             <Link to={"/"}>Home</Link><br />
             <Link to={"/counter"}>Counter</Link><br />
