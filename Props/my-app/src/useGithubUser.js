@@ -6,7 +6,7 @@ const fetcher = (url) => {
 }
 
 export function useGithubUser(username) {
-    const [data] = useSWR(
+    const [data, mutate] = useSWR(
         `https://api.github.com/users/${username}`,
         fetcher
     )
@@ -16,5 +16,12 @@ export function useGithubUser(username) {
         return {data:null}
     }
 
-    return { data }
+    function handleRefetch() {
+        mutate()
+    }
+
+    return { 
+        refetch: handleRefetch,
+        data 
+    }   
 }
