@@ -12,5 +12,9 @@ export function useGithubUser(username) {
     )
     console.log({data})
 
+    if (username === null) {
+        return {data:null}
+    }
+
     return { data }
 }
